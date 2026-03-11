@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongodb = require('./database/connect');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 const contactsRoutes = require('./routes/contacts');
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
