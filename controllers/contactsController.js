@@ -5,6 +5,9 @@ const ObjectId = require('mongodb').ObjectId;
  *  Deliver all contacts data
  * *************************************** */
 async function getAllContacts(req, res) {
+  // #swagger.summary = 'Get all contacts'
+  // #swagger.description = 'Endpoint to get all contacts from the database.'
+  // #swagger.tags = ['Contacts']
   const results = await mongodb.getDb().db().collection('contacts').find();
   results.toArray().then((contacts) => {
     res.setHeader('Content-Type', 'application/json');
@@ -16,6 +19,9 @@ async function getAllContacts(req, res) {
  *  Deliver contact data by id
  * *************************************** */
 async function getContactById(req, res) {
+  // #swagger.summary = 'Get a contact by ID'
+  // #swagger.description = 'Endpoint to get a single contact by its ID.'
+  // #swagger.tags = ['Contacts']
   const contactId = new ObjectId(req.params.id);
   const results = await mongodb.getDb().db().collection('contacts').find({ _id: contactId });
   results.toArray().then((contacts) => {
@@ -28,6 +34,9 @@ async function getContactById(req, res) {
  *  Add a contact
  * *************************************** */
 async function createContact(req, res) {
+  // #swagger.summary = 'Create a new contact'
+  // #swagger.description = 'Endpoint to create a new contact in the database.'
+  // #swagger.tags = ['Contacts']
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -47,6 +56,9 @@ async function createContact(req, res) {
  *  Update a contact
  * *************************************** */
 async function updateContact(req, res) {
+  // #swagger.summary = 'Update a contact by ID'
+  // #swagger.description = 'Endpoint to update an existing contact by its ID.'
+  // #swagger.tags = ['Contacts']
   const contactId = new ObjectId(req.params.id);
   const contact = {
     firstName: req.body.firstName,
@@ -82,6 +94,9 @@ async function updateContact(req, res) {
  *  Delete contact data by id
  * *************************************** */
 async function deleteContactById(req, res) {
+  // #swagger.summary = 'Delete a contact by ID'
+  // #swagger.description = 'Endpoint to delete a contact from the database by its ID.'
+  // #swagger.tags = ['Contacts']
   const contactId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: contactId });
   if (result.deletedCount === 1) {

@@ -38,7 +38,7 @@ DELETE http://localhost:3000/contacts/69b4b9f02a68c26585fad076
 GET https://cse-341-project1-pa9w.onrender.com/contacts
 
 ### Get contact by id
-GET https://cse-341-project1-pa9w.onrender.com/contacts/69aca5d5bbf295ce899997f8
+GET https://cse-341-project1-pa9w.onrender.com/contacts/69b4c346f8578d7ed550573b
 
 ### Create a new contact
 POST https://cse-341-project1-pa9w.onrender.com/contacts
@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### Update a contact
-PUT https://cse-341-project1-pa9w.onrender.com/contacts/69b4ba672a68c26585fad077
+PUT https://cse-341-project1-pa9w.onrender.com/contacts/69b4c346f8578d7ed550573b
 Content-Type: application/json
 
 {
@@ -65,5 +65,5 @@ Content-Type: application/json
 }
 
 ### Delete a contact
-DELETE https://cse-341-project1-pa9w.onrender.com/contacts/69b4ba672a68c26585fad077
+DELETE https://cse-341-project1-pa9w.onrender.com/contacts/69b4c1aa67d23fe9e6efe278
 
