@@ -3,7 +3,34 @@
 GET http://localhost:3000/contacts
 
 ### Get contact by id
-GET http://localhost:3000/contacts/69aca5d5bbf295ce899997f8
+GET http://localhost:3000/contacts/69b4b9f02a68c26585fad076
+
+### Create a new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-15"
+}
+
+### Update a contact
+PUT http://localhost:3000/contacts/69b4b9f02a68c26585fad076
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "favoriteColor": "green",
+  "birthday": "1990-01-15"
+}
+
+### Delete a contact
+DELETE http://localhost:3000/contacts/69b4b9f02a68c26585fad076
 
 
 // PRODUCTION
@@ -12,3 +39,31 @@ GET https://cse-341-project1-pa9w.onrender.com/contacts
 
 ### Get contact by id
 GET https://cse-341-project1-pa9w.onrender.com/contacts/69aca5d5bbf295ce899997f8
+
+### Create a new contact
+POST https://cse-341-project1-pa9w.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-15"
+}
+
+### Update a contact
+PUT https://cse-341-project1-pa9w.onrender.com/contacts/69b4ba672a68c26585fad077
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "favoriteColor": "green",
+  "birthday": "1990-01-15"
+}
+
+### Delete a contact
+DELETE https://cse-341-project1-pa9w.onrender.com/contacts/69b4ba672a68c26585fad077
+
