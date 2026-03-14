@@ -84,7 +84,7 @@ async function updateContact(req, res) {
       }
     );
   if (result.modifiedCount === 1) {
-    res.status(200).send();
+    res.status(204).send();
   } else {
     res.status(500).json(result.error || 'An error occurred while updating the contact.');
   }
@@ -100,7 +100,7 @@ async function deleteContactById(req, res) {
   const contactId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: contactId });
   if (result.deletedCount === 1) {
-    res.status(200).send();
+    res.status(204).send();
   } else {
     res.status(500).json(result.error || 'An error occurred while deleting the contact.');
   }
