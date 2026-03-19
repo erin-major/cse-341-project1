@@ -11,14 +11,14 @@ Content-Type: application/json
 
 {
   "firstName": "Jane",
-  "lastName": "Doe",
+  "lastName": "Doe 2",
   "email": "jane@example.com",
   "favoriteColor": "blue",
   "birthday": "1990-01-15"
 }
 
 ### Update a contact
-PUT http://localhost:3000/contacts/69b4b9f02a68c26585fad076
+PUT http://localhost:3000/contacts/69bb490e849bb06779dc172b
 Content-Type: application/json
 
 {
